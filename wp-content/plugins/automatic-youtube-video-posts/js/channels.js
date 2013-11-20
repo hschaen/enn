@@ -20,7 +20,7 @@
 /*-----------------------
 	Initialize
 -----------------------*/
-(function($) { $(document).ready(function () {
+(function($) { $(document).load(function () {
 	
 	$('.WP_ayvpp_edit').bind('mousedown',function () {
 		$('#WP_ayvpp_add_item_form').find('[name=item]').val($(this).parents('tr').find('input').val());
