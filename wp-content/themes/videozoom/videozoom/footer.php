@@ -28,7 +28,9 @@
 </div><!-- /#container -->
 
 <?php if (is_single()) { ?><script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script><?php } // Google Plus button ?>
-
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="/enn/wp-content/themes/videozoom/videozoom/bootstrap/dist/js/bootstrap.js"></script>
+<scritp src="/enn/wp-content/themes/videozoom/videozoom/js/custom.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>
