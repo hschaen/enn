@@ -128,7 +128,7 @@ margin-top:97px; height:30px; width:100%;}
 #topNav a {color: #999; text-decoration: none; text-shadow: #111 1px 1px 0; }
 #topNav a:hover {color: #ddd;}
 #topNav li.current-menu-item, #topNav li.current_page_item,  #topNav li.current-menu-ancestor,  #topNav li.current-menu-parent,  #topNav li.current_page_parent { background-color: #333; background-image:none;  -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;  }
-#topMenu { display: block; margin: 65px 2px 0; width: 824px; }
+#topMenu { display: block; margin: 65px 2px 0; width: 95%; }
 #topMenu li { font-size: 16px; }
 #menuSocial {float: right; display: inline; margin-top: 6px; font-size: 11px; }
 #menuSocial li {float: left; display: inline; margin-left: 5px; line-height: 20px; }
@@ -169,8 +169,8 @@ li.current-menu-item,  li.current_page_item,  li.current-menu-ancestor,  li.curr
 3. Featured Slider -------------------------  wpzoom_featured_posts.php
 
 *********************************************************************************************/
-#featuredContent {border: 1px solid #cccccc; margin:0 0 20px 0;}
-#featPosts { margin: 0px;  position:relative; font-size: 12px; line-height: 18px; background: #1f1f1f url(images/back_feat_posts.png) repeat-x top left; min-height: 250px; padding: 15px 0 0;  }
+#featuredContent {border: 1px solid #cccccc; margin-bottom:20px;}
+#featPosts {margin: 0px;  position:relative; font-size: 12px; line-height: 18px; background: #1f1f1f url(images/back_feat_posts.png) repeat-x top left; min-height: 250px; padding: 15px 0 0;  }
 
 #slider { padding: 15px; }
 #slider li div.cover,
@@ -254,8 +254,7 @@ html[xmlns] .slides {display: block;}
 *********************************************************************************************/
 
 /* Global elements */
-
-section#main {margin:0 auto; text-align:left;}
+section#main {margin:0 auto; text-align:left; width:95%;}
 header {height:auto;}
 
 /* Title */
@@ -673,12 +672,12 @@ img.ui-datepicker-trigger { border: 0px; padding: 0px; }
 @media screen and (max-width: 980px) {
 
     #container { width:92%; }
-
+    #showsContainer {width:auto;}
     #logo img { max-width:100%; height:auto; }
 
  	#featPosts { width:100%;  }
 
-	#content { width:73%; margin-right:0; }
+	#content {margin-right:0; }
  	#content ul.posts-3 li { width:31%; padding:1%; }
 	#content ul.list li { width:100%; }
  	#content ul.posts div.cover img { width:100%; height:auto; max-width:100%; }
@@ -800,11 +799,16 @@ img.ui-datepicker-trigger { border: 0px; padding: 0px; }
 
 
 /* All Mobile Sizes (devices and browser) */
-@media screen and (max-width: 640px) {
-
+@media screen and (max-width: 692px) {
+	li.last {display:none!important;}
+	.otherShows {width:100%!important;}
+	#showsInnerWrapper {width:100%!important; text-align: center!important;}
+	.showsFeatured {display:100%!important;}
 	#menuSocial { float:left; width:100%; margin-bottom:15px; }
 	#topMenu { width:98%; }
 
+	nav#topNav {display:none;}
+	nav#topNavMobile {display: block;}
 	#bannerHead {display:none; }
 
 	#featPosts .cover { width:100% !important; margin-bottom:15px;  }
@@ -846,7 +850,7 @@ body > a:nth-last-child(2) {display:none !important;}
 #messageSystem h5 {color:#99009E; font-weight:bold; border-bottom:1px solid #cccccc; margin-top:-10px;}
 
 /* SHOWS CSS */
-#showsContainer {width: 630px; float:left; margin:0; height:auto; display:inline-block; padding:20px; background: #eaeaea; /* Old browsers */
+#showsContainer {max-width:665px; float:left; margin:0; height:auto; display:inline-block; padding:20px; background: #eaeaea; /* Old browsers */
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
 background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzkwMDk5ZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIwJSIgc3RvcC1jb2xvcj0iI2VhZWFlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc1JSIgc3RvcC1jb2xvcj0iI2VhZWFlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjOWM5YzkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
 background: -moz-linear-gradient(top,  #90099e 0%, #eaeaea 20%, #eaeaea 75%, #c9c9c9 100%); /* FF3.6+ */
@@ -860,16 +864,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#90099e', end
 -moz-border-radius: 5px; border-radius: 5px; border:1px solid #cccccc;}
 #showsInnerWrapper {width:54%; height:auto; display: block; float:left;}
 .twoColumnsDiv {width: 715px}
-.showsFeatured {width:300px; height:auto; overflow:hidden;}
+.showsFeatured {height:auto; width: 95%; overflow:hidden;}
 .featuredShowTitle {width:300px; height:auto; text-align:center;}
 .showCats {width:100%; height: auto; margin:20px 0;}
 .otherShows {height:auto; width:46%; display:inline-block; margin:22px 0 0 0;}
 .otherShowsThumb {height:100px; overflow:hidden; border:10px solid #ffffff;}
 .otherShowsThumb img {margin:-20px 0;}
-.otherShowsBox {width:115px; vertical-align:top; overflow:hidden; height:auto; margin: 10px; display: inline-block;}
+.otherShowsBox {width:115px; vertical-align:top; overflow:hidden; height:auto; margin: 0 0 0 10px; display: inline-block;}
 .otherShowsTitle {width:100px; height:auto; text-align:center;}
 .otherShowsTitle a:hover {color:#1e90ff!important;}
 .showsListing {width:135px; vertical-align:top; overflow:hidden; height:auto; margin: 10px; display:inline-block;}
 .listOfShows {width:100%; height:auto; display:inline-block; margin:5px 0 0 0;}
 .listOfShows select {background:#ffffff; width:200px; padding:5px; font-size:16px; line-height:1; border-radius:0; height:34px; border:1px solid #333333;}
 p.listOfShowsTitle {margin:0px; font-size:16px; font-weight:bold; color:#99009E;}
+

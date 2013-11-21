@@ -295,7 +295,7 @@ function videozoom_featured_slider_assets() {
       current_flex = jQuery("#slider").flexslider({
           controlNav: false,
           directionNav:true,
-          animationLoop: false,
+          animationLoop: true,
           sync: "#carousel",
           video:true,
           animation: "<?php if (option::get('slideshow_effect') == 'Slide') { ?>slide<?php } else { ?>fade<?php } ?>",
@@ -327,7 +327,7 @@ function videozoom_featured_slider_assets() {
 
           if (src.indexOf('youtube') !== -1) {
               // enable YouTube API
-              $(this).prop('src', src + '&enablejsapi=1');
+              $(this).prop('src', src + '?version=3&enablejsapi=1');
               youtubeIDs.push($(this).prop('id'));
           }
       });

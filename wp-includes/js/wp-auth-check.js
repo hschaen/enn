@@ -8,7 +8,7 @@
 		if ( form.length ) {
 			// Add unload confirmation to counter (frame-busting) JS redirects
 			$(window).on( 'beforeunload.wp-auth-check', function(e) {
-				e.originalEvent.returnValue = window.authcheckL10n.beforeunload;
+				e.originalevent.preventDefault() = window.authcheckL10n.beforeunload;
 			});
 
 			frame = $('<iframe id="wp-auth-check-frame" frameborder="0">').attr( 'title', noframe.text() );

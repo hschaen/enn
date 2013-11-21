@@ -14,7 +14,7 @@
                         	<a href="<?php the_permalink() ?>" alt="<?php the_title(); ?>">
 							<?php
 								if ( has_post_thumbnail() ) {
-									the_post_thumbnail("medium");
+									the_post_thumbnail();
 								}?>
                              <div class="featuredShowTitle">
 							 	<?php echo get_the_category_by_id(9); ?>
