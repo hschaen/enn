@@ -24,12 +24,15 @@
     <?php ui::js("jwplayer"); ?>
     <?php ui::js("jquery.fitvid"); ?>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/enn/wp-content/themes/videozoom/videozoom/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="/enn/wp-content/themes/videozoom/videozoom/js/custom.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
 
 	<div class="topSpace">
-		<div class="topBanner"></div>
+		<div class="topBanner"><img src="http://harrisonschaen.com/enn/wp-content/uploads/2013/11/leaderboard.png"></img></div>
 		<div id="logo" onClick="javascript:window.location ='/enn';"></div>
 	</div>
 	<header>
@@ -65,40 +68,18 @@
 				});
 			});
 			</script>
-			<div class="collapse navbar-collapse visible-md visible-lg" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<?php if (has_nav_menu( 'secondary' )) {
 					wp_nav_menu(array(
 						'container' => '',
 						'container_class' => '',
 						'container_id' => '',
-						'menu_class' => 'nav navbar-nav pull-right',
+						'menu_class' => 'nav navbar-nav',
 						'menu_id' => '',
 						'sort_column' => 'menu_order',
 						'theme_location' => 'secondary'
 					));
 				} ?>
-				
-			</div>
-				<div class="collapse navbar-collapse hidden-md hidden-lg mobile" id="bs-example-navbar-collapse-1">
-					<script>
-						//if($(".mobile")[0]) {
-						//	$("ul.dropdown-menu").each(function() {
-						//		$("ul.dropdown-menu").removeClass("dropdown-menu");
-						//	});
-						//};
-					</script>
-					<?php if (has_nav_menu( 'secondary' )) {
-						wp_nav_menu(array(
-							'container' => '',
-							'container_class' => '',
-							'container_id' => '',
-							'menu_class' => 'nav navbar-nav',
-							'menu_id' => '',
-							'sort_column' => 'menu_order',
-							'theme_location' => 'secondary'
-						));
-					} ?>
-				
 				
 			</div>
 

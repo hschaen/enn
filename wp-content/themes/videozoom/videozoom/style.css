@@ -103,14 +103,15 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6fff', endC
 
 .topSpace {height:100px; width:auto;}
 
-#logo {float: left; display: inline-block; font-family:"Ropa Sans", Arial, sans-serif; text-transform:uppercase; background-image: url(http://www.harrisonschaen.com/enn/wp-content/uploads/2013/10/ENN-Logo-FINAL1.png); height: 200px; width: 200px; position: absolute; top: 50px; z-index: 999; }
+#logo {float: left; background-image: url(http://www.harrisonschaen.com/enn/wp-content/uploads/2013/10/ENN-Logo-FINAL1.png); height: 200px; width: 200px; position: absolute; top: 50px; z-index: 999; }
+/* #logo {height: auto; float: left; width:100%; position: absolute; top: 0; left: 0; background-image: url(http://www.harrisonschaen.com/enn/wp-content/uploads/2013/10/ENN-Logo-FINAL1.png); z-index: 999; } */
 #logo:hover {cursor: pointer;}
 #logo h1 a {color:#fff;	font-size:82px;	font-weight:bold; letter-spacing:-4px; }
 #logo a:hover {	text-decoration:none; color:#fefefe;}
 
 #bannerHead {/*float: right;*/ display: inline; margin:0 auto; text-align:center; width:100%; }
-.topBanner {width:768px; height:90px; background-color: #e7e7e7; margin:20px auto;}
-
+.topBanner {width:100%; height:auto; margin:20px auto; text-align:center;}
+.topBanner img {width:100%; height:auto; max-width: 728px; min-width:320px; margin:0 auto;}
 /*********************************************************************************************
 
 2. Navigation  -------------------------  header.php
@@ -248,8 +249,10 @@ html[xmlns] .slides {display: block;}
 .flex-control-thumbs img:hover {opacity: 1;}
 .flex-control-thumbs .active {opacity: 1; cursor: default;}
 
-#slider li .postcontent { height:100%; overflow:hidden;}
-.sliderContent {}
+#slider li .postcontent { height:100%; overflow:hidden; min-width:200px;}
+#featPosts > #slider > div > ul > li > div.cover > iframe {min-height:240px; height:auto!important; width:100%!important; max-width:100%!important;}
+
+/* .sliderContent {}*/
 
 /*********************************************************************************************
 
@@ -915,7 +918,7 @@ p.listOfShowsTitle {margin:0px; font-size:16px; font-weight:bold; color:#99009E;
 	.dropdown > .dropdown-menu > li.dropdown > ul.dropdown-menu > li > a:hover {
 		background-color: #
 	}
-	@media screen and (min-width:768px) {
+	@media screen and (min-width:920px) {
 		.dropdown:hover > .dropdown-menu {
 			display:block;
 		}
@@ -948,5 +951,19 @@ p.listOfShowsTitle {margin:0px; font-size:16px; font-weight:bold; color:#99009E;
 		ul.nav > li.dropdown > a {
 			font-weight: bold;
 		}
-		ul.nav {padding:0; margin:0;}
+		ul.nav {
+			padding:0; margin:0; float:right!important;
+		}
+
+
+	}
+	@media screen and (max-width:919px) {
+		#logo {margin-top:-20px; top: inherit; float: left; background-image: url(http://harrisonschaen.com/enn/wp-content/uploads/2013/11/ENN-Logo-sm.png); height: 90px; width: 90px; z-index: 999; }
+		.container {padding: 0 35px 0 0!important;}
+		.topSpace {height:auto!important;}
+		ul.navbar-nav > li {border-bottom:1px solid #eee;}
+		li.current-menu-item, li.current_page_item, li.current-menu-ancestor, li.current-menu-parent, li.current_page_parent { background: transparent!important; }
+		li.current-menu-item a, li.current_page_item a, li.current-menu-ancestor a, li.current-menu-parent a, li.current_page_parent a { color: #333333; }
+
+
 	}

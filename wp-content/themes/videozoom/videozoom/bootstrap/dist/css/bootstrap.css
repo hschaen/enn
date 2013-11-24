@@ -4376,7 +4376,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-collapse {
-  max-height: 340px;
+ /* max-height: 340px; */
   padding-right: 15px;
   padding-left: 15px;
   overflow-x: visible;
@@ -4725,7 +4725,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-toggle {
-  border-color: #dddddd;
+  background-color: #dddddd;
+  border-top-color, border-left-color: #ffffff;
+  border-right-color, border-bottom-color: #777777;
 }
 
 .navbar-default .navbar-toggle:hover,
@@ -4734,7 +4736,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #cccccc;
+  background-color: #90099E;
 }
 
 .navbar-default .navbar-collapse,
@@ -4769,18 +4771,18 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 @media (max-width: 919px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #777777;
+    color: #f7f7f7;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #333333;
-    background-color: transparent;
+    color: #ffffff;
+    background-color: #eb74f7;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #555555;
-    background-color: #e7e7e7;
+    color: #ffffff;
+    background-color: #777777;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,

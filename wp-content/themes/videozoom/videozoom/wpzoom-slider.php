@@ -45,8 +45,8 @@
 							<?php if ( isset( $url ) ) : ?>
 							'image' : '<?php echo $url; ?>',
 							<?php endif; ?>
-							'width': '<?php echo option::get("slider_thumb_width"); ?>',
-							'height': '<?php echo option::get("slider_thumb_height"); ?>',
+							// 'width': '<?php echo option::get("slider_thumb_width"); ?>',
+							// 'height': '<?php echo option::get("slider_thumb_height"); ?>',
 							'stretching': 'fill',
 	 						<?php if (strlen($video_hd) > 1) { ?>
 							'plugins': {
