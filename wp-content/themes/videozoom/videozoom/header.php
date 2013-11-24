@@ -27,40 +27,66 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div id="container">
-		<header>
-			<nav class="navbar navbar-default" role="navigation">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				      <span class="sr-only">Toggle navigation</span>
-				      <span class="icon-bar"></span>
-				      <span class="icon-bar"></span>
-				      <span class="icon-bar"></span>
-    				</button>
-   					<a class="navbar-brand" href="#"></a>
-				</div>
 
-				<script>
-				$(document).ready(function(){
-					$("ul.sub-menu").each(function(){
-					$(this).removeClass('sub-menu').addClass('dropdown-menu');
-					}),
+	<div class="topSpace">
+		<div class="topBanner"></div>
+		<div id="logo" onClick="javascript:window.location ='/enn';"></div>
+	</div>
+	<header>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			      <span class="sr-only">Toggle navigation</span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+				</button>
+					<a class="navbar-brand" href="#"></a>
+			</div>
+			<form class="navbar-form navbar-right visible-md visible-lg" role="search">
+		        <div class="form-group">
+		        	<input type="text" class="form-control" placeholder="Search">
+		     	</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+			<script>
+			$(document).ready(function(){
+				$("ul.sub-menu").each(function(){
+				$(this).removeClass('sub-menu').addClass('dropdown-menu');
+				}),
 
-					$("li.dropdown > a").each(function(){
-						$(this).addClass('dropdown-toggle');
-						$(".dropdown-toggle").attr("data-toggle", "dropdown");
-					}),
+				$("li.dropdown > a").each(function(){
+					$(this).addClass('dropdown-toggle');
+					$(".dropdown-toggle").attr("data-toggle", "dropdown");
+				}),
 
-					$("a.dropdown-toggle").each(function(){
-						$(this).append("<b class='caret'></b>");
-					}),
-
-					$("li.dropdown-submenu > a").each(function(){
-						$(this).attr("tabindex","-1");
-					});
+				$("li.dropdown-submenu > a").each(function(){
+					$(this).attr("tabindex","-1");
 				});
-				</script>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			});
+			</script>
+			<div class="collapse navbar-collapse visible-md visible-lg" id="bs-example-navbar-collapse-1">
+				<?php if (has_nav_menu( 'secondary' )) {
+					wp_nav_menu(array(
+						'container' => '',
+						'container_class' => '',
+						'container_id' => '',
+						'menu_class' => 'nav navbar-nav pull-right',
+						'menu_id' => '',
+						'sort_column' => 'menu_order',
+						'theme_location' => 'secondary'
+					));
+				} ?>
+				
+			</div>
+				<div class="collapse navbar-collapse hidden-md hidden-lg mobile" id="bs-example-navbar-collapse-1">
+					<script>
+						//if($(".mobile")[0]) {
+						//	$("ul.dropdown-menu").each(function() {
+						//		$("ul.dropdown-menu").removeClass("dropdown-menu");
+						//	});
+						//};
+					</script>
 					<?php if (has_nav_menu( 'secondary' )) {
 						wp_nav_menu(array(
 							'container' => '',
@@ -72,18 +98,16 @@
 							'theme_location' => 'secondary'
 						));
 					} ?>
-					<form class="navbar-form navbar-left" role="search">
-			        	<div class="form-group">
-			        		<input type="text" class="form-control" placeholder="Search">
-			     		</div>
-      					<button type="submit" class="btn btn-default">Submit</button>
-    				</form>
-				</div>
-			</nav>
-        		<!-- <div id="search-form">
-        			<?php get_search_form(); ?>
-        		</div> -->
-				<div id="topnav-bg"></div>
- 			</nav<!-- /#topNav -->
- 			
- 		</header>
+				
+				
+			</div>
+
+		</nav>
+			<!-- <div id="search-form">
+				<?php get_search_form(); ?>
+			</div> -->
+			<div id="topnav-bg"></div>
+			</nav<!-- /#topNav -->
+			
+		</header>
+ 		<div class="container">
