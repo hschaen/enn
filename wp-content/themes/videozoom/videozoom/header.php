@@ -19,14 +19,14 @@
     <![endif]-->
 	<link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
-    <?php wp_head(); ?>
-    <?php ui::js("jwplayer"); ?>
+	<?php ui::js("jwplayer"); ?>
     <?php ui::js("jquery.fitvid"); ?>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/enn/wp-content/themes/videozoom/videozoom/bootstrap/dist/js/bootstrap.js"></script>
 	<script src="/enn/wp-content/themes/videozoom/videozoom/js/custom.js"></script>
+    <?php wp_head(); ?>
+    
 </head>
 
 <body <?php body_class(); ?>>
