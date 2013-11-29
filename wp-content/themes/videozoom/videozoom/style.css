@@ -110,8 +110,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6fff', endC
 #logo a:hover {	text-decoration:none; color:#fefefe;}
 
 #bannerHead {/*float: right;*/ display: inline; margin:0 auto; text-align:center; width:100%; }
-.topBanner {width:100%; height:auto; margin:20px auto; text-align:center;}
-.topBanner img {width:100%; height:auto; max-width: 728px; min-width:320px; margin:0 20px; float:right;}
+.topBanner {width:100%; height:auto; margin:20px auto; text-align:right;}
+.topBanner img {width:100%; height:auto; max-width: 728px; min-width:320px; margin:0 20px 0 0;}
 /*********************************************************************************************
 
 2. Navigation  -------------------------  header.php
@@ -978,4 +978,5 @@ p.listOfShowsTitle {margin:0px; font-size:16px; font-weight:bold; color:#99009E;
 	@media screen and (max-width:991px) {
 		#showsContainer { width:100%;}
 		.sliderContent {width:100%!important; float: left!important;}
+		.otherShows {display: none!important;}
 	}
