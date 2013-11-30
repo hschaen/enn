@@ -1,4 +1,5 @@
 <p class="listOfShowsTitle">List of Shows:</p>
+<form action="" method="" id="">
 <?php
 $args = array(
 	'show_option_all'    => '',
@@ -22,3 +23,5 @@ $args = array(
         'walker'             => ''
 		);
 wp_dropdown_categories( $args ); ?> 
+<input id="submit" type="submit" placeholder="submit" />
+</form>

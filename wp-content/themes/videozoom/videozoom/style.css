@@ -58,7 +58,7 @@ blockquote cite {	margin: 5px 0 0;	display: block;	}
 .hidden {	display: none;	}
 .clear, .cleaner {	clear: both; height: 0;	overflow: hidden; }
 hr {	display: none;	}
-a img {	border: none;	}
+a img {	border: none; width:100% height:auto;	}
 /* End Various Tags & Classes*/
 
 
@@ -808,10 +808,23 @@ img.ui-datepicker-trigger { border: 0px; padding: 0px; }
 
 /* All Mobile Sizes (devices and browser) */
 @media screen and (max-width: 991px) {
-	li.last {display:none!important;}
-	.otherShows {width:100%!important;}
-	#showsInnerWrapper {width:100%!important; text-align: center!important;}
+	li.last {
+		display:none!important;
+	}
+	.otherShows {
+		width:100%!important;
+	}
+	#showsInnerWrapper {
+		width:100%!important; 
+		text-align: center!important;
+	}
+	#showsInnerWrapper h1 {
+		margin: 0 0 20px 0;
+		color: #f7f7f7;
+		text-shadow: 2px 2px #666666;
+	}
 	.showsFeatured {display:100%!important;}
+	.showsFeatured > a img {width:100%!important; height:auto!important;}
 	#menuSocial { float:left; width:100%; margin-bottom:15px; }
 	#topMenu { width:98%; }
 
@@ -876,16 +889,22 @@ body > a:nth-last-child(2) {display:none !important;}
 	border:1px solid #cccccc;
 }
 #showsInnerWrapper {width:54%; height:auto; display: block; float:left;}
+#showsInnerWrapper h1 {margin: 0 0 20px 0; color: #f7f7f7; text-shadow: 2px 2px #666666; }
 .twoColumnsDiv {width: 715px}
 .showsFeatured {height:auto; width: 95%; overflow:hidden;}
-.featuredShowTitle {width:300px; height:auto; text-align:center;}
+.featuredShowTitle {text-align:center; font-size:18px; font-weight:bold;}
+.showsFeatured a {display:block; background-color:#ffffff; padding:5px;}
+.showsFeatured a:hover {background-color:#eb74f7;}
 .showCats {width:100%; height: auto; margin:20px 0;}
-.otherShows {height:auto; width:46%; display:inline-block; margin:100px 0 0 0; text-align: center;}
-.otherShowsThumb {height:100px; overflow:hidden; border:10px solid #ffffff;}
+a.otherShowsBorder {background-color: #ffffff; display:inline-block; padding:5px; margin:5px;}
+.otherShows a:hover {background-color: #eb74f7;}
+.otherShows {height:auto; width:46%; display:inline-block; margin:65px 0 0 0; text-align: center;}
+.otherShowsThumb {height:100px; overflow:hidden;}
 .otherShowsThumb img {margin:-20px 0;}
-.otherShowsBox {width:115px; vertical-align:top; overflow:hidden; height:auto; margin: 0 0 0 7px; display: inline-block;}
-.otherShowsTitle {width:100px; height:auto; text-align:center;}
-.otherShowsTitle a:hover {color:#1e90ff!important;}
+.otherShowsBox {width:130px; vertical-align:top; overflow:hidden; height:auto;}
+.otherShowsTitle {height:auto; text-align:center;}
+.otherShowsTitle a {font-weight:bold;}
+.otherShowsTitle a:hover {text-decoration: underline;}
 .showsListing {width:135px; vertical-align:top; overflow:hidden; height:auto; margin: 10px; display:inline-block;}
 .listOfShows {width:100%; height:auto; display:inline-block; margin:5px 0 0 0;}
 .listOfShows select {background:#ffffff; width:200px; padding:5px; font-size:16px; line-height:1; border-radius:0; height:34px; border:1px solid #333333;}
@@ -962,6 +981,7 @@ p.listOfShowsTitle {margin:0px; font-size:16px; font-weight:bold; color:#99009E;
 		ul.nav {
 			padding:0; margin:0; float:right!important;
 		}
+		#showsInnerWrapper {width:51%;}
 
 
 	}
@@ -972,11 +992,15 @@ p.listOfShowsTitle {margin:0px; font-size:16px; font-weight:bold; color:#99009E;
 		ul.navbar-nav > li {border-bottom:1px solid #eee;}
 		li.current-menu-item, li.current_page_item, li.current-menu-ancestor, li.current-menu-parent, li.current_page_parent { background: transparent!important; }
 		li.current-menu-item a, li.current_page_item a, li.current-menu-ancestor a, li.current-menu-parent a, li.current_page_parent a { color: #333333; }
-
+		.otherShows {display: none!important;}
 
 	}
 	@media screen and (max-width:991px) {
 		#showsContainer { width:100%;}
 		.sliderContent {width:100%!important; float: left!important;}
-		.otherShows {display: none!important;}
+		
+	}
+	@media screen and (min-width: 920px) and (max-width: 1200px) {
+		.otherShows {width:100%; margin:20px auto!;}
+		#showsInnerWrapper {width:100%;}
 	}
