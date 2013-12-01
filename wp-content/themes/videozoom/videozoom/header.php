@@ -38,13 +38,19 @@
 	<header>
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				
+				<button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 			      <span class="sr-only">Toggle navigation</span>
 			      <span class="icon-bar"></span>
 			      <span class="icon-bar"></span>
 			      <span class="icon-bar"></span>
 				</button>
-					<a class="navbar-brand" href="#"></a>
+				<div class="form-group searchMobile visible-xs pull-left ">
+
+		        	<input type="text" class="form-control" placeholder="Search terms...">
+		        </div>
+		        	<button type="submit" class="btn btn-default pull-left searchMobile"><span class="glyphicon glyphicon-search"></span> Search</button>
+		     	</div>
 			</div>
 			<form class="navbar-form navbar-right visible-md visible-lg" role="search">
 		        <div class="form-group">

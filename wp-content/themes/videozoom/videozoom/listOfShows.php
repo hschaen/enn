@@ -23,5 +23,5 @@ $args = array(
         'walker'             => ''
 		);
 wp_dropdown_categories( $args ); ?> 
-<input id="submit" type="submit" placeholder="submit" />
+<input id="submit" type="submit" value="Watch now" />
 </form>

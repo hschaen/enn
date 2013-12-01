@@ -110,8 +110,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6fff', endC
 #logo a:hover {	text-decoration:none; color:#fefefe;}
 
 #bannerHead {/*float: right;*/ display: inline; margin:0 auto; text-align:center; width:100%; }
-.topBanner {width:100%; height:auto; margin:20px auto; text-align:right;}
-.topBanner img {width:100%; height:auto; max-width: 728px; min-width:320px; margin:0 20px 0 0;}
+.topBanner {width:100%; height:auto; margin:30px auto; text-align:center;}
+.topBanner img {width:100%; height:auto; max-width: 728px; min-width:320px;}
 /*********************************************************************************************
 
 2. Navigation  -------------------------  header.php
@@ -478,10 +478,10 @@ img.alignleft {	margin: 0 10px 5px 0;	display: inline;	}
 #formContent {clear: left; padding-top:7px; }
 
 #commentform label {font-weight:bold; line-height: 2.0em; font-size: 12px;  color: #fff; margin-bottom: 5px; }
-#main #submit, #commentform #submit {background:none; font-size: 12px; text-transform: lowercase; padding: 5px 7px; width: auto; cursor: pointer; }
+#main #submit, #commentform #submit {background:none; font-size: 12px; padding: 5px 7px; width: auto; cursor: pointer; }
 
 #main ol.normalComments img.avatar {border: solid 4px #222; }
-#main #submit, #commentform #submit { background: #2e2e2e url(images/back_menu.png) repeat-x top left; color: #fff; border: none; text-transform:uppercase; font-weight:bold; font-family:Arial; font-size:11px; text-shadow:1px 1px 0 #000000; }
+#main #submit, #commentform #submit { background: #2e2e2e url(images/back_menu.png) repeat-x top left; color: #fff; border: none; font-weight:bold; font-family:Arial; font-size:16px; }
 #main #submit:hover, #commentform #submit:hover {  color: #55cc55; }
 
 
@@ -509,7 +509,7 @@ img.alignleft {	margin: 0 10px 5px 0;	display: inline;	}
 
 *********************************************************************************************/
 
-#sidebar {float: right; display: inline; width: 250px; /*margin:0 0 0 40px;*/ background-color: #eeeeee; padding: 0 10px; }
+#sidebar {float: right; display: inline; width: 250px; /*margin:0 0 0 40px;*/ background-color: #eeeeee; padding: 0 10px; border:1px solid #cccccc; }
 #sidebar-single {float: left; display: inline; width: 125px; }
 
 .widget h3 {color: #fff; font-weight: bold; font-size: 16px; line-height: 22px; padding-bottom: 4px; margin: 0 0 15px; border-bottom: solid 2px #333; }
@@ -535,7 +535,7 @@ img.alignleft {	margin: 0 10px 5px 0;	display: inline;	}
 .widget  ul.posts .postmetadata a {color:#888; font-weight:normal; font-size:11px;}
 
 /* WPZOOM Social Widget */
-.widget .social li { display: inline; width: 46%; float: left; padding: 10px 0; margin-right: 6px; line-height: 16px; }
+.widget .social li { display: inline; float: left; padding: 10px 0; margin-right: 6px; line-height: 16px; }
 .widget .social li a { font-size: 12px; font-weight: bold; }
 .widget .social li a span { font-size: 11px; display: block; font-weight: normal; }
 .widget .social img { float: left; margin-right: 7px; }
@@ -544,8 +544,10 @@ img.alignleft {	margin: 0 10px 5px 0;	display: inline;	}
 .wpzoom_media .open .description { margin: 10px 0 5px; font-size: 12px; line-height: 16px; }
 .wpzoom_media .hide { display: none; }
 .wpzoom_media li { border-bottom: 1px dotted #4D4C4C; list-style-type: none; font-size: 14px; padding: 8px 0; line-height: 20px; }
-.wpzoom_media li a  { font-weight: normal; }
-.wpzoom_media li a.active { font-weight: bold; }
+.wpzoom_media li a  { font-weight: normal; display: block; padding:3px;}
+.wpzoom_media li a.active {color: #fff; font-weight:bold;}
+.wpzoom_media li a.active, .wpzoom_media li a:hover {background-color: #eb74f7; }
+
 
 /* WPZOOM: Recent Comments */
 .recent-comments-list .avatar {	margin-right: 12px;	float: left;}
@@ -576,6 +578,10 @@ ul.gallery a:hover, ul.gallery li:hover, ul.gallery li a:hover, #ads li:hover { 
 #footWidgets {margin: 40px 0 20px; font-size: 12px; line-height: 18px; }
 #footWidgets div.column {float: left; display: inline; margin-right: 20px; width: 225px; }
 #footWidgets div.last {margin-right: 0;}
+
+/* Paypal Donations widget */
+#main .paypal-donations {margin:0 auto; width:100%; text-align: center;}
+#main .paypal-donations input {background-color:transparent; border:none;}
 
 /*********************************************************************************************
 
@@ -891,7 +897,7 @@ body > a:nth-last-child(2) {display:none !important;}
 #showsInnerWrapper {width:54%; height:auto; display: block; float:left;}
 #showsInnerWrapper h1 {margin: 0 0 20px 0; color: #f7f7f7; text-shadow: 2px 2px #666666; }
 .twoColumnsDiv {width: 715px}
-.showsFeatured {height:auto; width: 95%; overflow:hidden;}
+.showsFeatured {height:auto; width: 100%; overflow:hidden;}
 .featuredShowTitle {text-align:center; font-size:18px; font-weight:bold;}
 .showsFeatured a {display:block; background-color:#ffffff; padding:5px;}
 .showsFeatured a:hover {background-color:#eb74f7;}
@@ -906,9 +912,12 @@ a.otherShowsBorder {background-color: #ffffff; display:inline-block; padding:5px
 .otherShowsTitle a {font-weight:bold;}
 .otherShowsTitle a:hover {text-decoration: underline;}
 .showsListing {width:135px; vertical-align:top; overflow:hidden; height:auto; margin: 10px; display:inline-block;}
-.listOfShows {width:100%; height:auto; display:inline-block; margin:5px 0 0 0;}
+.listOfShows {width:100%; height:auto; display:inline-block; margin:5px 0 0 0; background-color: #ffffff; padding:10px 0;}
 .listOfShows select {background:#ffffff; width:200px; padding:5px; font-size:16px; line-height:1; border-radius:0; height:34px; border:1px solid #333333;}
-p.listOfShowsTitle {margin:0px; font-size:16px; font-weight:bold; color:#99009E;}
+.listOfShows input#submit { color: #fff; padding: 5px 10px; background: #eb74f7 url(images/back_menu.png) repeat-x top left; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
+.listOfShows input#submit :hover{ background: #90099E url(images/back_menu.png) repeat-x top left;}
+
+p.listOfShowsTitle {margin:0px; font-size:24px; font-weight:bold; color:#99009E;}
 .showsWithSidebar {width:100%; height:auto;}
 /* Additional Bootstrap Styles */
 	.dropdown {
@@ -993,12 +1002,15 @@ p.listOfShowsTitle {margin:0px; font-size:16px; font-weight:bold; color:#99009E;
 		li.current-menu-item, li.current_page_item, li.current-menu-ancestor, li.current-menu-parent, li.current_page_parent { background: transparent!important; }
 		li.current-menu-item a, li.current_page_item a, li.current-menu-ancestor a, li.current-menu-parent a, li.current_page_parent a { color: #333333; }
 		.otherShows {display: none!important;}
-
+		ul.flex-direction-nav {display:none!important;}
 	}
 	@media screen and (max-width:991px) {
 		#showsContainer { width:100%;}
 		.sliderContent {width:100%!important; float: left!important;}
-		
+		section#main {width:100%important;}
+		#sidebar {margin-top: 20px;}
+		.searchMobile {margin:8px;}
+		div.form-group.searchMobile {padding-left:10%;}
 	}
 	@media screen and (min-width: 920px) and (max-width: 1200px) {
 		.otherShows {width:100%; margin:20px auto!;}

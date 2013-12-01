@@ -86,7 +86,8 @@ p.postmetadata, .postmetadata a {color: #1e90ff!important; }
 
 #main div.navigation {/*float:left;*/ width:100%; border-top: solid 1px #EDEDED; border-bottom: solid 1px #EDEDED; }
 
-.widget h3 { color:#555; border-bottom: 1px solid #ff0000;}
+.widget h3 { color:#90099e!important; font-size:18px; border-bottom: 1px solid #90099e; text-shadow:2px 2px #ffffff; -webkit-box-shadow: 0px 2px 0px #ffffff;
+-moz-box-shadow: 0px 2px 0px #ffffff; box-shadow: 0px 2px 0px #ffffff;}
 #container div.sep { border-bottom: 1px solid #EDEDED; }
 .singlepost h1 { border-bottom:1px solid #EDEDED; }
 #content div.postmetadata .section {  border-bottom: 1px solid #EDEDED;   }
@@ -136,8 +137,8 @@ div.zoomVideoBig { background: #414141; border-bottom:1px solid #C7CBD0; }
 
 #main input, #main textarea, #commentform input, #commentform textarea {font-size: 12px;  background-color: #F8F8F8;   border:1px solid #E6E6E6; color: #333;}
 
-#main #submit, #commentform #submit { background: #414141; }
-#main #submit:hover, #commentform #submit:hover { background: #768391; color: #fff; }
+#main #submit, #commentform #submit { background: #eb74f7; }
+#main #submit:hover, #commentform #submit:hover { background: #90099e; color: #fff; }
 
 #searchform input#searchsubmit {  background: #414141; color:#fff; }
 #searchform input#searchsubmit:hover {  background: #768391; color:#fff; }
