@@ -18,11 +18,15 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 	<link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
+	<!-- basic ALS css -->
+<!-- 	<link rel="stylesheet" type="text/css" media="screen" href="/enn/wp-content/themes/videozoom/videozoom/anylistscroller/css/als_demo.css" /> -->
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php ui::js("jwplayer"); ?>
     <?php ui::js("jquery.fitvid"); ?>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- your ALS version -->
+	<script type="text/javascript" src="/enn/wp-content/themes/videozoom/videozoom/anylistscroller/js/jquery.als-1.2.min.js"></script>
 	<script src="/enn/wp-content/themes/videozoom/videozoom/bootstrap/dist/js/bootstrap.js"></script>
 	<script src="/enn/wp-content/themes/videozoom/videozoom/js/custom.js"></script>
     <?php wp_head(); ?>
@@ -49,7 +53,7 @@
 
 		        	<input type="text" class="form-control" placeholder="Search terms...">
 		        </div>
-		        	<button type="submit" class="btn btn-default pull-left searchMobile"><span class="glyphicon glyphicon-search"></span> Search</button>
+		        	<button type="submit" class="btn btn-default pull-left searchMobile visible-xs"><span class="glyphicon glyphicon-search"></span> Search</button>
 		     	</div>
 			</div>
 			<form class="navbar-form navbar-right visible-md visible-lg" role="search">

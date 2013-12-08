@@ -14,6 +14,7 @@
             <!-- SHOWS -->
     		    <?php get_template_part('shows'); ?>
             <!-- END SHOWS -->
+            <?php get_template_part('categoryLists'); ?>
             <!-- START SIDEBAR -->
             <?php if (option::get('sidebar_home') == 'off') { echo "</div>"; } ?>
         		<?php if (option::get('sidebar_home') == 'on') { ?>
